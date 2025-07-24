@@ -1,105 +1,61 @@
 # 🎵 Spotify Song Recommendation System
 
 ## 📌 Overview  
-A **content-based music recommendation system** that suggests songs similar to your favorite tracks. By analyzing audio features through machine learning, it delivers **personalized music suggestions** that match the mood, tempo, and energy of songs you like.
+This is a **content-based music recommendation system** that suggests songs similar to your favorite tracks using machine learning. It analyzes various audio features to deliver personalized recommendations that match your musical taste and mood.
 
 ---
 
 ## ✨ Features  
 - 🎯 **Personalized Recommendations**  
-  Get 5 songs similar to your selected track.
+  Suggests 5 songs based on the selected track.
 
 - 🎧 **Spotify Integration**  
-  Fetches album covers and song previews using Spotify API.
+  Fetches album covers, artist info, and song previews directly from the Spotify API.
 
 - 🔊 **Audio Previews**  
-  Listen to 30-second snippets of recommended songs.
+  Listen to 30-second audio clips of recommended tracks.
 
-- 📋 **Detailed Song Info**  
-  View album name, artist, release year, and popularity score.
+- 📋 **Detailed Song Information**  
+  View artist name, album title, release year, and popularity.
 
 - 💻 **Responsive Design**  
-  Works seamlessly on both desktop and mobile.
+  Fully functional on both desktop and mobile devices.
 
 ---
 
 ## 🛠️ Technologies Used  
 - **Python**  
-- **Streamlit** – Frontend framework  
+- **Streamlit** – Web app frontend  
 - **Spotipy** – Spotify Web API wrapper  
-- **Scikit-learn** – ML model using K-Nearest Neighbors  
-- **Pickle** – For model serialization
+- **Scikit-learn** – K-Nearest Neighbors (KNN) algorithm  
+- **Pickle** – For model serialization  
 
 ---
 
 ## 🔍 How It Works  
-1. The app uses the **K-Nearest Neighbors (KNN)** algorithm to find similar songs.  
-2. Songs are compared using audio features like:  
+1. Uses the **KNN algorithm** to find songs with similar audio characteristics.  
+2. Audio features include:  
    - Danceability  
    - Energy  
-   - Acousticness  
    - Tempo  
+   - Acousticness  
    - Valence  
-3. Once a song is selected, the system finds similar tracks from the dataset.  
-4. It then fetches additional data (cover, preview, artist, etc.) from the **Spotify API**.
+3. Based on the selected song, the app retrieves the most similar songs.  
+4. It then uses the Spotify API to display song previews, album art, and metadata.
 
 ---
 
-## 🚀 Demo Links  
-- 🔗 **Render Deployment**: *Coming Soon*  
-- 🔗 **Streamlit Cloud Deployment**: *Coming Soon*
+## 🚀 Live Demo  
+- 🌐 [Render Deployment](https://spotify-song-recommendation-system.onrender.com)  
+- 🌐 [Streamlit Cloud Deployment](https://songrecommendationsystem-clwjppwpvkgesdxpjntryj.streamlit.app/)
 
 ---
 
 ## 📦 Installation  
 
-To run locally:
+To run the project locally:
 
 ### 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/spotify-song-recommender.git
-cd spotify-song-recommender
-
-
-2. Install dependencies:
-bash
-Copy
-Edit
-pip install -r requirements.txt
-3. Set up Spotify API credentials:
-Visit Spotify Developer Dashboard
-
-Create an app to get your CLIENT_ID and CLIENT_SECRET
-
-Add them in your code (usually in app.py)
-
-4. Run the app:
-bash
-Copy
-Edit
-streamlit run app.py
-📂 Project Structure
-bash
-Copy
-Edit
-spotify-song-recommender/
-├── app.py               # Streamlit frontend
-├── df.pkl               # Processed song dataset
-├── matrix.pkl           # Feature matrix
-├── NN_model.pkl         # Trained ML model
-├── requirements.txt     # Python dependencies
-└── README.md            # Documentation
-📝 Future Enhancements
-🔐 Add user authentication to save preferences
-
-🤝 Implement collaborative filtering
-
-🎼 Auto-create Spotify playlists from recommendations
-
-😊 Add mood/emotion-based filtering
-
-🎶 Improve audio analysis with additional features
-
-yaml
-Copy
-Edit
+git clone https://github.com/yourusername/spotify-song-recommendation-system.git
+cd spotify-song-recommendation-system
